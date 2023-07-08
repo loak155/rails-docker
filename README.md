@@ -16,12 +16,29 @@
    $ echo POSTGRES_PASSWORD=任意のパスワード > .env
    ```
 
+1. イメージの作成
+
+   以下コマンドを実行し、イメージを作成する。
+
+   ```
+   $ docker-compose build
+   ```
+
+1. DB 作成
+
+   以下コマンドを実行し、DB を作成する。
+
+   ```
+   $ docker-compose run web rake db:create
+   $ docker-compose run web rails db:migrate
+   ```
+
 1. コンテナの作成・起動
 
    以下コマンドを実行し、コンテナを作成・起動する。
 
    ```
-   $ docker-compose up --build
+   $ docker-compose up
    ```
 
 1. 動作確認
