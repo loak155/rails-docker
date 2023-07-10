@@ -8,14 +8,6 @@
    $ git clone https://github.com/loak155/rails-docker.git
    ```
 
-1. DB パスワードの設定
-
-   以下コマンドを実行し、`.env` に DB のパスワードを設定する。
-
-   ```
-   $ echo POSTGRES_PASSWORD=任意のパスワード > .env
-   ```
-
 1. イメージの作成
 
    以下コマンドを実行し、イメージを作成する。
