@@ -1,24 +1,38 @@
-# README
+# 環境構築方法
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. リポジトリのクローン
 
-Things you may want to cover:
+   以下コマンドを実行し、リポジトリをローカルにクローンする。
 
-* Ruby version
+   ```
+   $ git clone https://github.com/loak155/rails-docker.git
+   ```
 
-* System dependencies
+1. イメージの作成
 
-* Configuration
+   以下コマンドを実行し、イメージを作成する。
 
-* Database creation
+   ```
+   $ docker-compose build
+   ```
 
-* Database initialization
+1. DB 作成
 
-* How to run the test suite
+   以下コマンドを実行し、DB を作成する。
 
-* Services (job queues, cache servers, search engines, etc.)
+   ```
+   $ docker-compose run web rake db:create
+   $ docker-compose run web rails db:migrate
+   ```
 
-* Deployment instructions
+1. コンテナの作成・起動
 
-* ...
+   以下コマンドを実行し、コンテナを作成・起動する。
+
+   ```
+   $ docker-compose up
+   ```
+
+1. 動作確認
+
+   http://localhost:3000/ にアクセスする
